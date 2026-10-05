@@ -1,4 +1,4 @@
-const googleScriptUrl = "https://script.google.com/macros/s/AKfycbxYhuEMbVP0_hkX80LKgus-vjJiBFbCte035vbAWcOOp3JVAeyZ-JwZV4i6jA1g2CVG/exec";
+const googleScriptUrl = "https://script.google.com/macros/s/AKfycbxylv2YUyPssrzcc2WemS0XBZmtP3du4qBtdVrAQEsfMiL6b8NMiiKK2JP81KxG7jxeoQ/exec";
 const weddingDate = new Date("2026-12-23T18:30:00+02:00");
 const pageLoader = document.getElementById("pageLoader");
 const openEnvelope = document.getElementById("openEnvelope");
@@ -64,7 +64,7 @@ function openInvitation() {
 function createCalendarLinks() {
   const title = encodeURIComponent("Mariage Eve & Eytan");
   const details = encodeURIComponent("Kabbalat Panim à 18h30. Houppa à 19h30.");
-  const location = encodeURIComponent("Salle Ya'ar, 1 Yasmin Street, Mate Yehuda Regional Council 90, Israel");
+  const location = encodeURIComponent("אולם יער, Yasmin Street 1, Moshav Ora, Israel");
   if (calendarLink) {
     calendarLink.href = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=20261223T163000Z/20261223T213000Z&details=${details}&location=${location}`;
   }
@@ -74,7 +74,7 @@ function createCalendarLinks() {
       "UID:mariage-eve-eytan-20261223", "DTSTART:20261223T163000Z",
       "DTEND:20261223T213000Z", "SUMMARY:Mariage Eve & Eytan",
       "DESCRIPTION:Kabbalat Panim à 18h30. Houppa à 19h30.",
-      "LOCATION:Salle Ya'ar, Moshav Ora, Jérusalem", "END:VEVENT", "END:VCALENDAR"
+      "LOCATION:אולם יער, Yasmin Street 1, Moshav Ora, Israel", "END:VEVENT", "END:VCALENDAR"
     ].join("\r\n");
     appleCalendarLink.href = URL.createObjectURL(new Blob([ics], { type: "text/calendar;charset=utf-8" }));
     appleCalendarLink.download = "mariage-eve-eytan.ics";
